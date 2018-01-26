@@ -1,3 +1,7 @@
+# Copyright (c) 2018 Open Source Foundries Limited.
+#
+# SPDX-License-Identifier: Apache-2.0
+
 import argparse
 import requests
 import json
