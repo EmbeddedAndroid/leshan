@@ -39,8 +39,8 @@ class UpdateAction:
 update_list = []
 
 def signal_handler(signal, frame):
-        print('Script aborted')
-        exit(0)
+    print('Script aborted')
+    exit(0)
 
 # add process interrupt handler
 signal.signal(signal.SIGINT, signal_handler)
@@ -174,11 +174,11 @@ def run(client, url, hostname, port, monitor, device, max_threads):
         response = get(client_list_url, raw=True)
         if response:
             for target in response:
-		perform_update = True
+                perform_update = True
                 if 'endpoint' in target:
                     if device:
                         endpoint_url = 'http://%s:%s/api/clients/%s/3/0/1'  % (hostname, port, target['endpoint'])
-			endpoint_device = get(endpoint_url)
+                        endpoint_device = get(endpoint_url)
                         if (endpoint_device != device):
                             perform_update = False
                     if perform_update:
