@@ -221,7 +221,7 @@ def run(client, url, hostname, port, monitor, device, max_threads):
         elif ua.result:
             logging.info('[%s] update SUCCESS (%d seconds)', ua.client, timediff.seconds)
         else:
-            logging.info('[%s] update FAILED(%d) (%d seconds)', ua.client, ua.update_status, timediff.seconds)
+            logging.info('[%s] update FAILED(%d) (%d seconds)', ua.client, ua.update_result, timediff.seconds)
             result = 1
     timediff = datetime.datetime.now() - start_time
     logging.info('%d update(s) attempted which took %d seconds total', count, timediff.seconds)
